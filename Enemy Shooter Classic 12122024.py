@@ -12,7 +12,7 @@ def game():
     py = 940
     WIN = pg.display.set_mode((w, h))
     pg.display.set_caption("Enemy Shooter classic 10062024")
-    BG = pg.transform.scale(pg.image.load("bg.png"), (w, h))
+    BG = pg.transform.scale(pg.image.load("bges2.png"), (w, h))
     PW = 150
     PH = 350
     PH1 = 200
@@ -76,14 +76,14 @@ def game():
                 player.x += PVB
                 player1.x += PVB
                 player2.x += PVB
-            if keys[pg.K_s]:
+            if keys[pg.K_SPACE]:
                 if player.x + 75 >= enemy.x:
                     if player.x + 75 <= enemy.x + 76:
                         score += 1
                         enemy.x = rand.randint(1, 924)
                         head.x = enemy.x + 13
                         time.x += TXW
-                        mixer.music.load('gunshot.mp3')
+                        mixer.music.load('gunshot2.mp3')
                         mixer.music.play()
                         pg.display.update()
             if time.x <= 0:
